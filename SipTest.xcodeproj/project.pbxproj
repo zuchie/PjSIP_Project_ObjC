@@ -7,28 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B928F8041FEB12010056118E /* ProviderDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B928F8031FEB12010056118E /* ProviderDelegate.swift */; };
 		B9354D711FEF148E00A58D5C /* sip_autoconf.h.in in Resources */ = {isa = PBXBuildFile; fileRef = B9354C431FEF148700A58D5C /* sip_autoconf.h.in */; };
 		B9354D721FEF148E00A58D5C /* config_auto.h.in in Resources */ = {isa = PBXBuildFile; fileRef = B9354C751FEF148900A58D5C /* config_auto.h.in */; };
 		B9354D731FEF148E00A58D5C /* config_auto.h.in in Resources */ = {isa = PBXBuildFile; fileRef = B9354CC71FEF148A00A58D5C /* config_auto.h.in */; };
 		B9354D741FEF148E00A58D5C /* os_auto.h.in in Resources */ = {isa = PBXBuildFile; fileRef = B9354D321FEF148E00A58D5C /* os_auto.h.in */; };
 		B9354D751FEF148E00A58D5C /* m_auto.h.in in Resources */ = {isa = PBXBuildFile; fileRef = B9354D411FEF148E00A58D5C /* m_auto.h.in */; };
 		B9354D771FEF154B00A58D5C /* pjsip.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B9354D761FEF154A00A58D5C /* pjsip.a */; };
-		B94A28D91FE7532300178838 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94A28D81FE7532300178838 /* AppDelegate.swift */; };
 		B94A28DB1FE7532300178838 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94A28DA1FE7532300178838 /* ViewController.swift */; };
 		B94A28DE1FE7532300178838 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B94A28DC1FE7532300178838 /* Main.storyboard */; };
 		B94A28E01FE7532300178838 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B94A28DF1FE7532300178838 /* Assets.xcassets */; };
 		B94A28E31FE7532300178838 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B94A28E11FE7532300178838 /* LaunchScreen.storyboard */; };
-		B9A1A2EF1FE845CD00A02AE5 /* Callbacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A1A2EE1FE845CD00A02AE5 /* Callbacks.swift */; };
 		B9A1A2F11FE8883F00A02AE5 /* OutgoingCallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A1A2F01FE8883F00A02AE5 /* OutgoingCallViewController.swift */; };
 		B9A1A2F31FE8889E00A02AE5 /* IncomingCallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A1A2F21FE8889E00A02AE5 /* IncomingCallViewController.swift */; };
 		B9A1A34A1FE91AD700A02AE5 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B94A291F1FE75A3C00178838 /* AVFoundation.framework */; };
 		B9CEE79F1FFCBE53005EB25E /* PushKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9CEE79E1FFCBE52005EB25E /* PushKit.framework */; };
 		B9CEE7A21FFF57EA005EB25E /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9CEE7A11FFF57EA005EB25E /* VideoToolbox.framework */; };
+		B9CEE7AE2002F53F005EB25E /* SipTestAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B9CEE7AD2002F53F005EB25E /* SipTestAppDelegate.m */; };
+		B9CEE7B5200362EF005EB25E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B9CEE7B4200362EF005EB25E /* main.m */; };
+		B9CEE7BA20038013005EB25E /* pjsua_app.c in Sources */ = {isa = PBXBuildFile; fileRef = B9CEE7B920038013005EB25E /* pjsua_app.c */; };
+		B9CEE7BE20038170005EB25E /* pjsua_app_common.c in Sources */ = {isa = PBXBuildFile; fileRef = B9CEE7BD20038170005EB25E /* pjsua_app_common.c */; };
+		B9CEE7C12003F238005EB25E /* pjsua_app_config.c in Sources */ = {isa = PBXBuildFile; fileRef = B9CEE7C02003F238005EB25E /* pjsua_app_config.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B928F8031FEB12010056118E /* ProviderDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderDelegate.swift; sourceTree = "<group>"; };
 		B9354C2F1FEF148600A58D5C /* pjmedia-codec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "pjmedia-codec.h"; path = "Pod/pjsip-include/pjmedia-codec.h"; sourceTree = SOURCE_ROOT; };
 		B9354C301FEF148700A58D5C /* pjsip_simple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = pjsip_simple.h; path = "Pod/pjsip-include/pjsip_simple.h"; sourceTree = SOURCE_ROOT; };
 		B9354C311FEF148700A58D5C /* pjmedia_videodev.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = pjmedia_videodev.h; path = "Pod/pjsip-include/pjmedia_videodev.h"; sourceTree = SOURCE_ROOT; };
@@ -339,7 +340,6 @@
 		B9354D701FEF148E00A58D5C /* string.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = string.h; sourceTree = "<group>"; };
 		B9354D761FEF154A00A58D5C /* pjsip.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = pjsip.a; path = Pod/pjsip.a; sourceTree = SOURCE_ROOT; };
 		B94A28D51FE7532300178838 /* SipTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SipTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B94A28D81FE7532300178838 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B94A28DA1FE7532300178838 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B94A28DD1FE7532300178838 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B94A28DF1FE7532300178838 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -347,12 +347,20 @@
 		B94A28E41FE7532300178838 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B94A291F1FE75A3C00178838 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		B9A1A2EB1FE7639500A02AE5 /* SipTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SipTest-Bridging-Header.h"; sourceTree = "<group>"; };
-		B9A1A2EE1FE845CD00A02AE5 /* Callbacks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Callbacks.swift; sourceTree = "<group>"; };
 		B9A1A2F01FE8883F00A02AE5 /* OutgoingCallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutgoingCallViewController.swift; sourceTree = "<group>"; };
 		B9A1A2F21FE8889E00A02AE5 /* IncomingCallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomingCallViewController.swift; sourceTree = "<group>"; };
 		B9CEE79E1FFCBE52005EB25E /* PushKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PushKit.framework; path = System/Library/Frameworks/PushKit.framework; sourceTree = SDKROOT; };
 		B9CEE7A01FFCD0FA005EB25E /* SipTest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SipTest.entitlements; sourceTree = "<group>"; };
 		B9CEE7A11FFF57EA005EB25E /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
+		B9CEE7AD2002F53F005EB25E /* SipTestAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SipTestAppDelegate.m; sourceTree = "<group>"; };
+		B9CEE7AF2002F553005EB25E /* SipTestAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SipTestAppDelegate.h; sourceTree = "<group>"; };
+		B9CEE7B4200362EF005EB25E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B9CEE7B820038013005EB25E /* pjsua_app.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = pjsua_app.h; path = "../New Group/pjsua_app.h"; sourceTree = "<group>"; };
+		B9CEE7B920038013005EB25E /* pjsua_app.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = pjsua_app.c; sourceTree = "<group>"; };
+		B9CEE7BC20038170005EB25E /* pjsua_app_common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pjsua_app_common.h; sourceTree = "<group>"; };
+		B9CEE7BD20038170005EB25E /* pjsua_app_common.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = pjsua_app_common.c; sourceTree = "<group>"; };
+		B9CEE7BF2003F238005EB25E /* pjsua_app_config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pjsua_app_config.h; sourceTree = "<group>"; };
+		B9CEE7C02003F238005EB25E /* pjsua_app_config.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = pjsua_app_config.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -831,18 +839,19 @@
 		B94A28D71FE7532300178838 /* SipTest */ = {
 			isa = PBXGroup;
 			children = (
+				B9CEE7BB20038137005EB25E /* pjsua */,
 				B9CEE7A01FFCD0FA005EB25E /* SipTest.entitlements */,
-				B94A28D81FE7532300178838 /* AppDelegate.swift */,
 				B94A28DA1FE7532300178838 /* ViewController.swift */,
 				B94A28DC1FE7532300178838 /* Main.storyboard */,
 				B94A28DF1FE7532300178838 /* Assets.xcassets */,
 				B94A28E11FE7532300178838 /* LaunchScreen.storyboard */,
 				B94A28E41FE7532300178838 /* Info.plist */,
 				B9A1A2EB1FE7639500A02AE5 /* SipTest-Bridging-Header.h */,
-				B9A1A2EE1FE845CD00A02AE5 /* Callbacks.swift */,
 				B9A1A2F01FE8883F00A02AE5 /* OutgoingCallViewController.swift */,
 				B9A1A2F21FE8889E00A02AE5 /* IncomingCallViewController.swift */,
-				B928F8031FEB12010056118E /* ProviderDelegate.swift */,
+				B9CEE7AD2002F53F005EB25E /* SipTestAppDelegate.m */,
+				B9CEE7AF2002F553005EB25E /* SipTestAppDelegate.h */,
+				B9CEE7B4200362EF005EB25E /* main.m */,
 			);
 			path = SipTest;
 			sourceTree = "<group>";
@@ -872,6 +881,19 @@
 				B94A291F1FE75A3C00178838 /* AVFoundation.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B9CEE7BB20038137005EB25E /* pjsua */ = {
+			isa = PBXGroup;
+			children = (
+				B9CEE7B820038013005EB25E /* pjsua_app.h */,
+				B9CEE7B920038013005EB25E /* pjsua_app.c */,
+				B9CEE7BC20038170005EB25E /* pjsua_app_common.h */,
+				B9CEE7BD20038170005EB25E /* pjsua_app_common.c */,
+				B9CEE7BF2003F238005EB25E /* pjsua_app_config.h */,
+				B9CEE7C02003F238005EB25E /* pjsua_app_config.c */,
+			);
+			path = pjsua;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -960,12 +982,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9CEE7BE20038170005EB25E /* pjsua_app_common.c in Sources */,
 				B9A1A2F11FE8883F00A02AE5 /* OutgoingCallViewController.swift in Sources */,
+				B9CEE7BA20038013005EB25E /* pjsua_app.c in Sources */,
+				B9CEE7C12003F238005EB25E /* pjsua_app_config.c in Sources */,
 				B94A28DB1FE7532300178838 /* ViewController.swift in Sources */,
-				B94A28D91FE7532300178838 /* AppDelegate.swift in Sources */,
-				B928F8041FEB12010056118E /* ProviderDelegate.swift in Sources */,
 				B9A1A2F31FE8889E00A02AE5 /* IncomingCallViewController.swift in Sources */,
-				B9A1A2EF1FE845CD00A02AE5 /* Callbacks.swift in Sources */,
+				B9CEE7B5200362EF005EB25E /* main.m in Sources */,
+				B9CEE7AE2002F53F005EB25E /* SipTestAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1023,6 +1047,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -1080,6 +1105,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;

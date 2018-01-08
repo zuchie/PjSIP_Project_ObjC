@@ -8,6 +8,19 @@
 
 import UIKit
 
+enum SIPNotification: String {
+    case incomingVideo = "SIPIncomingVideoNotification"
+    case callState = "SIPCallStatusChangedNotification"
+    case registrationState = "SIPRegisterStatusNotification"
+
+    var notification: Notification.Name {
+        return Notification.Name(rawValue: self.rawValue)
+    }
+}
+
+//var desc = pj_thread_desc()
+//var thread = pj_thread_t()
+
 class ViewController: UIViewController {
 
     @IBOutlet weak var serverURITextField: UITextField!
@@ -21,7 +34,7 @@ class ViewController: UIViewController {
         
         serverURITextField.text = "siptest.butterflymx.com"
         
-        NotificationCenter.default.addObserver(self, selector: #selector(handleRegistrationStatus), name: SIPNotification.registrationState.notification, object: nil)        
+        NotificationCenter.default.addObserver(self, selector: #selector(handleRegistrationStatus), name: SIPNotification.registrationState.notification, object: nil)
     }
     
 //    @objc func tapToDismissKeyboard() {
@@ -60,15 +73,36 @@ class ViewController: UIViewController {
         accountConfig.cred_info.0.username = pj_str(UnsafeMutablePointer<Int8>(mutating: username))
         accountConfig.cred_info.0.data_type = Int32(PJSIP_CRED_DATA_PLAIN_PASSWD.rawValue)
         accountConfig.cred_info.0.data = pj_str(UnsafeMutablePointer<Int8>(mutating: password))
+
+        // Show incoming video
+        //accountConfig.vid_in_auto_show = pj_bool_t(PJ_TRUE.rawValue)
+
+        app_config_init_video(&accountConfig)
+
+//        if(!pj_thread_is_registered())
+//        {
+//            if (pj_thread_register(NULL,desc,&pthread) == PJ_SUCCESS)
+//            {
+//                //thread_registered = PJ_TRUE;
+//            }
+//        }
         
-        let status: pj_status_t = pjsua_acc_add(&accountConfig, pj_bool_t(PJ_TRUE.rawValue), &accountID)
+//        pj_thread_register(NULL,desc,&pthread)
+        
+        var status: pj_status_t = pjsua_acc_add(&accountConfig, pj_bool_t(PJ_TRUE.rawValue), &accountID)
         
         if status != PJ_SUCCESS.rawValue {
             print("Register error, status: \(status)")
+            return
         }
         
-        // Show incoming video
-        accountConfig.vid_in_auto_show = pj_bool_t(PJ_TRUE.rawValue)
+        status = pjsua_acc_set_online_status(pjsua_acc_get_default(), pj_bool_t(PJ_TRUE.rawValue))
+        if status != PJ_SUCCESS.rawValue {
+            fatalError()
+        }
+        
+        performSegue(withIdentifier: "segueLoginToOutgoingCall", sender: self)
+        
 //        accountConfig.vid_out_auto_transmit = pj_bool_t(PJ_TRUE.rawValue)
         
 //        accountConfig.vid_wnd_flags = PJMEDIA_VID_DEV_WND_BORDER.rawValue | PJMEDIA_VID_DEV_WND_RESIZABLE.rawValue
@@ -77,11 +111,11 @@ class ViewController: UIViewController {
     }
     
     @objc func handleRegistrationStatus(_ notification: Notification) {
-        let accountID: pjsua_acc_id = notification.userInfo!["accountID"] as! pjsua_acc_id
-        let status: pjsip_status_code = notification.userInfo!["status"] as! pjsip_status_code
-        let statusText: String = notification.userInfo!["statusText"] as! String
+        let accountID: pjsua_acc_id = notification.userInfo!["acc_id"] as! pjsua_acc_id
+        let status: NSNumber = notification.userInfo!["status"] as! NSNumber
+        let statusText: String = notification.userInfo!["status_text"] as! String
         
-        if status != PJSIP_SC_OK {
+        if status != 200 {
             print("Registration failed, status: \(status, statusText) ")
             
             return

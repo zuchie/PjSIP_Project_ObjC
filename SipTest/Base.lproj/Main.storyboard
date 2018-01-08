@@ -170,7 +170,7 @@
         <!--Incoming Call View Controller-->
         <scene sceneID="Y2Z-Gf-Wg4">
             <objects>
-                <viewController id="uFL-LI-DY3" customClass="IncomingCallViewController" customModule="SipTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="IncomingCallViewController" id="uFL-LI-DY3" customClass="IncomingCallViewController" customModule="SipTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="etu-QJ-iWY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

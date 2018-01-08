@@ -3,4 +3,8 @@
 //
 
 #import <pjsua-lib/pjsua.h>
+#import "SipTestAppDelegate.h"
+#import "pjsua_app_common.h"
+
+
 //#include <pjmedia_audiodev.h>

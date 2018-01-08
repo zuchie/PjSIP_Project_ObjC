@@ -36,19 +36,19 @@ class OutgoingCallViewController: UIViewController {
     }
 
     @objc func handleCallStatusChanged(_ notification: Notification) {
-        let callID: pjsua_call_id = notification.userInfo!["callID"] as! pjsua_call_id
-        let state: pjsip_inv_state = notification.userInfo!["state"] as! pjsip_inv_state
+        let callID: pjsua_call_id = notification.userInfo!["call_id"] as! pjsua_call_id
+        let state: NSNumber = notification.userInfo!["state"] as! NSNumber
         
         if callID != self.callID {
             print("Incorrect Call ID.")
             return
         }
         
-        if state == PJSIP_INV_STATE_DISCONNECTED {
+        if state == 6 {
             callButton.setTitle("Call", for: .normal)
-        } else if state == PJSIP_INV_STATE_CONNECTING {
+        } else if state == 4 {
             print("Call connecting...")
-        } else if state == PJSIP_INV_STATE_CONFIRMED {
+        } else if state == 5 {
             callButton.setTitle("Hangup", for: .normal)
         }
     }
